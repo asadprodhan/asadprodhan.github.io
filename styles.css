@@ -10,20 +10,39 @@
 
 /* Academic profile links and clickable appointments */
 .hero-profile-links {
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: .7rem 1.1rem;
+  gap: .65rem;
+  margin-top: 1.25rem;
 }
+
 .hero-profile-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: .62rem 1rem;
+  background: #f3e7e2;
+  border: 1px solid #c76b4f;
+  border-radius: 6px;
+  color: #7a2f1f;
   font-weight: 700;
+  font-size: .92rem;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.hero-profile-links a:hover,
+
+.hero-profile-links a:hover {
+  background: var(--brick);
+  border-color: var(--brick);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,.12);
+}
+
 .hero-profile-links a:focus-visible {
-  border-bottom-color: currentColor;
+  outline: 3px solid rgba(125,51,40,.25);
+  outline-offset: 3px;
 }
+
 .credential-grid .credential-card {
   position: relative;
   display: flex;
